@@ -5,12 +5,14 @@ import TaskItem from "./TaskItem";
 
 const TaskList = ({ tasks, setTasks, onEditTask }) => {
   const [filters, setFilters] = useState({});
+  const [originalTasks, setOriginalTasks] = useState([]);
 
   useEffect(() => {
     const fetchTasks = async () => {
       try {
         const fetchedTasks = await taskService.getTasks(filters);
         setTasks(fetchedTasks);
+        setOriginalTasks(fetchedTasks);
       } catch (error) {
         console.error("Error al obtener las tareas:", error);
       }
@@ -18,19 +20,16 @@ const TaskList = ({ tasks, setTasks, onEditTask }) => {
     fetchTasks();
   }, [filters, setTasks]);
 
+
   const handleFilter = (status) => {
-    setFilters({ status });
+    if (status === "reset") {
+      setFilters({});
+    } else {
+      setFilters({ status }); 
+    }
   };
 
-  const handleSort = (field) => {
-    const sortedTasks = [...tasks].sort((a, b) => {
-      if (field === "dueDate") {
-        return new Date(a[field]) - new Date(b[field]);
-      }
-      return a[field].localeCompare(b[field]);
-    });
-    setTasks(sortedTasks);
-  };
+
 
   const handleUpdateTask = async (updatedTask) => {
     try {
@@ -62,15 +61,11 @@ const TaskList = ({ tasks, setTasks, onEditTask }) => {
           <Dropdown.Item onClick={() => handleFilter("completada")}>
             Completadas
           </Dropdown.Item>
-        </Dropdown>
-        <Dropdown label="Ordenar">
-          <Dropdown.Item onClick={() => handleSort("title")}>
-            Por Título
-          </Dropdown.Item>
-          <Dropdown.Item onClick={() => handleSort("dueDate")}>
-            Por Fecha
+          <Dropdown.Item onClick={() => handleFilter("reset")}>
+            Restablecer Filtro
           </Dropdown.Item>
         </Dropdown>
+
       </div>
 
       <div className="grid grid-cols-1 gap-4">
