@@ -3,7 +3,7 @@ import {  FaLinkedin, FaBriefcase } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-4 mt-36">
+    <footer className="bg-gray-800 text-white py-4 mt-48">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
        
