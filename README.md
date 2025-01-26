@@ -1,85 +1,85 @@
 
 # Task Management App
 
-Aplicación de gestión de tareas construida con React. Permite a los usuarios registrar, iniciar sesión, crear, editar, eliminar y listar tareas de manera eficiente.
+Task management application built with React. It allows users to register, log in, create, edit, delete, and list tasks efficiently.
 
-## Características
+## Features
 
-- Registro e inicio de sesión de usuarios.
-- Gestión de tareas (crear, actualizar, eliminar, listar).
-- Filtros y ordenación de tareas.
-- Notificaciones en tiempo real para operaciones de tareas.
-- Utiliza `tailwindcss` para el diseño y `flowbite` para componentes UI.
+- User registration and login.
+- Task management (create, update, delete, list).
+- Filters and sorting of tasks.
+- Real-time notifications for task operations.
+- Uses `tailwindcss` for design and `flowbite` for UI components.
 
-## Requisitos Previos
+## Prerequisites
 
-- Node.js (versión 14 o superior)
-- npm (gestor de paquetes de Node.js)
+- Node.js (version 14 or higher)
+- npm (Node.js package manager)
 
-## Instalación
+## Installation
 
-Sigue los pasos a continuación para instalar y ejecutar la aplicación en tu máquina local.
+Follow the steps below to install and run the application on your local machine.
 
-### 1. Clonar el repositorio
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/tu-usuario/task-management-app.git
+git clone https://github.com/your-username/task-management-app.git
 cd task-management-app
 ```
 
-### 2. Instalar dependencias
+### 2. Install dependencies
 
-Puedes instalar las dependencias utilizando el script de instalación rápida, que se adapta tanto a **Linux** como **Windows**.
+You can install the dependencies using the quick installation script, which works for both **Linux** and **Windows**.
 
-### 3. Ejecutar el script de instalación
+### 3. Run the installation script
 
-Dependiendo de tu sistema operativo, utiliza uno de los siguientes scripts para instalar las dependencias:
+Depending on your operating system, use one of the following scripts to install the dependencies:
 
-#### En Linux
+#### On Linux
 
-1. Abre una terminal y asegúrate de que el archivo de script tenga permisos de ejecución:
+1. Open a terminal and make sure the script file has execution permissions:
 
    ```bash
    chmod +x install_dependencies.sh
    ```
 
-2. Ejecuta el script para instalar las dependencias:
+2. Run the script to install the dependencies:
 
    ```bash
    ./install_dependencies.sh
    ```
 
-#### En Windows
+#### On Windows
 
-1. Abre PowerShell o CMD como administrador.
+1. Open PowerShell or CMD as administrator.
 
-2. Ejecuta el siguiente comando para instalar las dependencias:
+2. Run the following command to install the dependencies:
 
    ```powershell
    .\install_dependencies.ps1
    ```
 
-### 4. Iniciar el servidor de desarrollo
+### 4. Start the development server
 
-Una vez instaladas las dependencias, puedes iniciar el servidor de desarrollo ejecutando el siguiente comando:
+Once the dependencies are installed, you can start the development server by running the following command:
 
 ```bash
 npm start
 ```
 
-Esto iniciará la aplicación en `http://localhost:3000`.
+This will start the application at `http://localhost:3000`.
 
-### 5. Ejecutar en producción
+### 5. Run in production
 
-Para crear una versión optimizada para producción, ejecuta el siguiente comando:
+To create an optimized production build, run the following command:
 
 ```bash
 npm run build
 ```
 
-Esto generará una carpeta `build` con los archivos optimizados para producción.
+This will generate a `build` folder with optimized files for production.
 
-## Desarrollado con
+## Built with
 
 - **React**
 - **Tailwind CSS**
@@ -88,47 +88,47 @@ Esto generará una carpeta `build` con los archivos optimizados para producción
 - **JWT**
 - **react-router-dom**
 
-## Licencia
+## License
 
-Este proyecto está bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## Scripts de Instalación
+## Installation Scripts
 
 ### **Linux: `install_dependencies.sh`**
 
-Crea un archivo llamado `install_dependencies.sh` en la raíz del proyecto con el siguiente contenido:
+Create a file named `install_dependencies.sh` in the root of the project with the following content:
 
 ```bash
 #!/bin/bash
 
-# Verifica si npm está instalado
+# Check if npm is installed
 if ! command -v npm &> /dev/null
 then
-    echo "npm no está instalado. Por favor, instala Node.js y npm primero."
+    echo "npm is not installed. Please install Node.js and npm first."
     exit
 fi
 
-# Instalación de dependencias
-echo "Instalando dependencias..."
+# Install dependencies
+echo "Installing dependencies..."
 npm install axios react-router-dom jwt-decode flowbite-react tailwindcss @heroicons/react react-hot-toast
 
-# Configuración de TailwindCSS
+# Configure TailwindCSS
 npx tailwindcss init
 
-echo "Dependencias instaladas con éxito."
+echo "Dependencies installed successfully."
 ```
 
-**Instrucciones para Linux:**
+**Instructions for Linux:**
 
-1. Asegúrate de que el archivo `install_dependencies.sh` tenga permisos de ejecución. Ejecuta el siguiente comando:
+1. Make sure the `install_dependencies.sh` file has execution permissions. Run the following command:
 
    ```bash
    chmod +x install_dependencies.sh
    ```
 
-2. Luego, ejecuta el script con:
+2. Then, run the script with:
 
    ```bash
    ./install_dependencies.sh
@@ -138,39 +138,38 @@ echo "Dependencias instaladas con éxito."
 
 ### **Windows: `install_dependencies.ps1`**
 
-Crea un archivo llamado `install_dependencies.ps1` en la raíz del proyecto con el siguiente contenido:
+Create a file named `install_dependencies.ps1` in the root of the project with the following content:
 
 ```powershell
-# Verifica si npm está instalado
+# Check if npm is installed
 $npm = Get-Command npm -ErrorAction SilentlyContinue
 if (-not $npm) {
-    Write-Host "npm no está instalado. Por favor, instala Node.js y npm primero."
+    Write-Host "npm is not installed. Please install Node.js and npm first."
     exit
 }
 
-# Instalación de dependencias
-Write-Host "Instalando dependencias..."
+# Install dependencies
+Write-Host "Installing dependencies..."
 npm install axios react-router-dom jwt-decode flowbite-react tailwindcss @heroicons/react react-hot-toast
 
-# Configuración de TailwindCSS
+# Configure TailwindCSS
 npx tailwindcss init
 
-Write-Host "Dependencias instaladas con éxito."
+Write-Host "Dependencies installed successfully."
 ```
 
-**Instrucciones para Windows:**
+**Instructions for Windows:**
 
-1. Ejecuta PowerShell como administrador (haz clic derecho y selecciona "Ejecutar como administrador").
+1. Run PowerShell as administrator (right-click and select "Run as administrator").
 
-2. Navega al directorio del proyecto con el siguiente comando:
+2. Navigate to the project directory with the following command:
 
    ```powershell
-   cd C:\ruta\a\tu\proyecto
+   cd C:\path	o\your\project
    ```
 
-3. Luego, ejecuta el script con:
+3. Then, run the script with:
 
    ```powershell
    .\install_dependencies.ps1
    ```
-
