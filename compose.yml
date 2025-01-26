@@ -1,9 +1,7 @@
 name: notes_app
 services:
-
   frontend:
     container_name: frontend
-
     build:
       context: .
       dockerfile: ./Dockerfile
@@ -21,4 +19,4 @@ services:
 networks:
   notes:
     driver: bridge
-    external: true
+    external: true
