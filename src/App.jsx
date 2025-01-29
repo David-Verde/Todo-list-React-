@@ -3,7 +3,7 @@ import { Toaster } from "react-hot-toast";
 import Navbar from "./components/common/Navbar";
 import Login from "./components/pages/Login";
 import Register from "./components/pages/Register";
-import Dashboard from "./components/pages/Dashboard";
+/* import Dashboard from "./components/pages/Dashboard"; */
 import PrivateRoute from "./components/common/PrivateRoute";
 import Footer from "./components/pages/Footer";
 
@@ -11,7 +11,7 @@ import Footer from "./components/pages/Footer";
 function App() {
   return (
     <BrowserRouter>
- 
+  hello world
       <Navbar />
 
       <Toaster position="top-right" />
@@ -23,7 +23,7 @@ function App() {
           path="/dashboard"
           element={
             <PrivateRoute>
-              <Dashboard />
+           {/*    <Dashboard /> */}
          
             </PrivateRoute>
           }
