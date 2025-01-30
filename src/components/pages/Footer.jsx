@@ -10,7 +10,8 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Sobre mi</h3>
             <p className="text-gray-400">
-              Soy David Verde un programador Full stack con 5 años de experiencia en diferentes tecnologias como React, Angular, React Native, Ruby on Rails, NodeJs testing units y PostgresQl. me enfoco en mejorar siempre para crear aplicaciones atrativas y enfocadas en la comodidad del usuario.
+            
+I am David Verde, a Full Stack developer with 5 years of experience in various technologies such as React, Angular, React Native, Ruby on Rails, Node.js, unit testing, and PostgreSQL. I focus on continuous improvement to create attractive applications centered on user comfort.
             </p>
           </div>
 
