@@ -31,8 +31,8 @@ const Navbar = () => {
        </>
     ) : (
         <>
-        <Link to="/login">Login</Link>
-        <Link to="/register">Register</Link></>
+        <Link className='text-xl font-bold text-white' to="/login">Login</Link>
+        <Link className='text-xl font-bold text-white' to="/register">Register</Link></>
     )}
 
 </div>
