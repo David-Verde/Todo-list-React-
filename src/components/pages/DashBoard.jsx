@@ -3,7 +3,7 @@ import TaskList from "../tasks/TaskList";
 import TaskForm from "../tasks/TaskForm";
 import { Button } from "flowbite-react";
 
-const DashBoard = () => {
+const Dashboard = () => {
   const [showTaskForm, setShowTaskForm] = useState(false);
   const [tasks, setTasks] = useState([]);
   const [taskToEdit, setTaskToEdit] = useState(null);
@@ -61,4 +61,4 @@ const DashBoard = () => {
   );
 };
 
-export default DashBoard;
+export default Dashboard;

@@ -11,7 +11,6 @@ function App() {
   return (
     
     <BrowserRouter>
-    Hello world
       <Navbar />
       <Toaster position="top-right" />
 
