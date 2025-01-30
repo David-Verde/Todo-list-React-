@@ -2,7 +2,7 @@
 https://github.com/David-Verde/Todo-list-React-
 
 
-# Task Management App
+# Task Management App.
 
 Task management application built with React. It allows users to register, log in, create, edit, delete, and list tasks efficiently.
 
